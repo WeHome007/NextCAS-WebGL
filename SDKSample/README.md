@@ -2,7 +2,7 @@
 1. UE 5.0.3
 2. Visual Studio 2022
 3. Windows SDK 10.0.22621.0
-4. 下载SDK：链接：https://pan.baidu.com/s/1xaVSg6ItkSX-Ox2vXMzLFA?pwd=16r3 
+4. 下载SDK：链接：https://pan.baidu.com/s/1covDRq_sXC90rNbHmdgOyw?pwd=18p4
 5. 解压到UE的安装目录下：UE/Engine/Plugins/Marketplace。
    解压后的路径应该为：D:\UE_5.0\Engine\Plugins\Marketplace\NextHuman\Release\...
 
