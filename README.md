@@ -20,4 +20,4 @@ WebGL
 
 
 ### 3、联系我们
-<img src="https://nexthuman.cn/wiki/assets/qrcode.1e88c411.png" height="600" width="300"></img>
+<img src="https://nexthuman.cn/wiki/assets/qrcode.1e88c411.png" height="300" width="300"></img>
