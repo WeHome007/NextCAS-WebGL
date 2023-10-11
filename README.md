@@ -1,7 +1,7 @@
 ## NextHuman虚拟人开发
 
 ### 1、开发者中心
-[开发者中心](https://nexthuman.cn/developer)
+[开发者注册](https://nexthuman.cn/developer)
 
 ### 2、案例展示
 #### UE
@@ -9,7 +9,7 @@
 #### WebGL
 
 ### 3、SDK集成
-参见各3D引擎的Demo
+按需选择以下集成
 
 [UE5](UE5/README.md)
 
