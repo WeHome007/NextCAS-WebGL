@@ -1,7 +1,7 @@
 ## NextHuman虚拟人开发
 
 ### 1、开发者中心
-[Developer](https://nexthuman.cn/developer)
+[开发者中心](https://nexthuman.cn/developer)
 
 ### 2、案例展示
 #### UE
