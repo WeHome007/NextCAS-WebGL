@@ -6,7 +6,7 @@
 ### 2、案例展示
 《UE示例》
 
-<img src="https://cdn.wehome.cn/cmn/png/META-8NA66KC1-OYLELYLD6GZZBDJJRXAM3-ZK45KLNL-R3.png" height="720" width="1280"></img>
+<img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-OYLELYLD6GZZBDJJRXAM3-SEJCKLNL-S3.jpeg" height="720" width="1280"></img>
 
 《WebGL示例》
 
