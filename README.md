@@ -6,9 +6,8 @@
 ### 2、案例展示
 #### UE
 
-#### WebGL
+WebGL
 <img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-OYLELYLD6GZZBDJJRXAM3-N0POJLNL-Q3.jpeg" height="600" width="300"></img>
-![WebGL](https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-OYLELYLD6GZZBDJJRXAM3-N0POJLNL-Q3.jpeg)
 
 ### 3、SDK集成
 按需选择以下集成
@@ -19,4 +18,4 @@
 
 
 ### 3、联系我们
-![企微](https://nexthuman.cn/wiki/assets/qrcode.1e88c411.png)
+<img src="https://nexthuman.cn/wiki/assets/qrcode.1e88c411.png" height="600" width="300"></img>
