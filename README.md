@@ -6,7 +6,7 @@
 ### 2、案例展示
 《UE示例》
 
-<img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-OYLELYLD6GZZBDJJRXAM3-CZSJKLNL-T3.jpeg" ></img>
+<img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-OYLELYLD6GZZBDJJRXAM3-CZSJKLNL-T3.jpeg?_t=20231111" ></img>
 
 《WebGL示例》
 
@@ -21,4 +21,4 @@
 
 
 ### 3、联系我们
-<img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-C35FTNQMCNKYUAHXH3HV3-N0G59VNL-X1.jpeg" height="300" width="300"></img>
+<img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-C35FTNQMCNKYUAHXH3HV3-N0G59VNL-X1.jpeg?_t=20231111" height="300" width="300"></img>
