@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount ,onDestroy} from "svelte";
   import NextCas from "@nextcas/sdk";
   import type { ReplayEvent } from "@nextcas/sdk";
   let container: HTMLDivElement;
@@ -11,6 +11,10 @@
   let inited = false;
   let inputValue = "";
 
+  async function getToken() {
+   return {data:''}
+  }
+
   let chatHistory: { source: "nexthuman" | "guest"; content: string }[] = [
     {
       source: "nexthuman",
@@ -18,32 +22,46 @@
     },
   ];
 
-  
   onMount(async () => {
+    const { data: token } = await getToken();
     cas = new NextCas(container, {
       avatarId: "avatar_257",
       actorId: "641811add41a3f2f91247af5",
-      token:'',
-      templateName: "base",
+      token,
+      templateName: "introduce",
+      // src:"http://127.0.0.1:5173/demo"
     });
 
+ 
+
     cas.on("initProgress", (cent) => {
+    
       progress = cent;
     });
 
     cas.on("ready", () => {
+     
+     
       inited = true;
       setTimeout(() => {
         cas.speak("你好，请问有什么可以帮您");
       });
     });
   });
+  
+  onDestroy(()=>{
+    if (cas) {
+      cas.destroy();
+    }
+  })
+  
 
-  const reload = () => {
+  const reload = async () => {
     if (cas) {
       inited = false;
-      process = 0;
-      cas.reload();
+      progress = 0;
+      const token = await getToken();
+      cas.reload(token.data);
     }
   };
 
@@ -70,7 +88,7 @@
 
     const index = chatHistory.length;
     function reply(data: ReplayEvent) {
-      console.log(data);
+     
       if (data.id === askId) {
         if (!chatHistory[index]) {
           chatHistory.push({
@@ -90,6 +108,22 @@
     }
     cas.on("reply", reply);
   };
+
+  const speackStream = () =>{
+    const stream = cas?.createSpeackStream();
+    stream.next("你好")
+    setTimeout(()=>{
+      stream.next("我是小唯")
+      stream.last("很高兴见到你")
+
+    },1000)
+  }
+
+
+  const stopAct = () => {
+    cas?.call('stopAct');
+    // console.log(cas)
+  }
 </script>
 
 <div style="display: flex;">
@@ -158,7 +192,11 @@
       <textarea bind:value={inputValue} />
       <button on:click={ask}>ask</button>
       <button on:click={speak}>speak</button>
+      <button on:click={stopAct}>打断演讲</button>
+      <button on:click={speackStream}>流式演讲</button>
+
     </div>
+   
 
     {#if !!inited}
       <div class="chat-history">
