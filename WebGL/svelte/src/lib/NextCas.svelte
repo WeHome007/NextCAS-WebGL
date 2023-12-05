@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount ,onDestroy} from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import NextCas from "@nextcas/sdk";
   import type { ReplayEvent } from "@nextcas/sdk";
   let container: HTMLDivElement;
@@ -32,29 +32,23 @@
       // src:"http://127.0.0.1:5173/demo"
     });
 
- 
-
     cas.on("initProgress", (cent) => {
-    
       progress = cent;
     });
 
     cas.on("ready", () => {
-     
-     
       inited = true;
       setTimeout(() => {
         cas.speak("你好，请问有什么可以帮您");
       });
     });
   });
-  
-  onDestroy(()=>{
+
+  onDestroy(() => {
     if (cas) {
       cas.destroy();
     }
-  })
-  
+  });
 
   const reload = async () => {
     if (cas) {
@@ -88,7 +82,6 @@
 
     const index = chatHistory.length;
     function reply(data: ReplayEvent) {
-     
       if (data.id === askId) {
         if (!chatHistory[index]) {
           chatHistory.push({
@@ -109,20 +102,25 @@
     cas.on("reply", reply);
   };
 
-  const speackStream = () =>{
+  const speackStream = () => {
     const stream = cas?.createSpeackStream();
-    stream.next("你好")
-    setTimeout(()=>{
-      stream.next("我是小唯")
-      stream.last("很高兴见到你")
-
-    },1000)
-  }
-
+    stream.next("你好");
+    setTimeout(() => {
+      stream.next("我是小唯");
+      stream.last("很高兴见到你");
+    }, 1000);
+  };
 
   const stopAct = () => {
-    cas?.call('stopAct');
+    cas?.call("stopAct");
     // console.log(cas)
+  };
+
+
+ async function setAvatar(avatarId:string,actorId:string){
+   await cas?.setAvatar(avatarId);
+   await cas?.setActor(actorId);
+   
   }
 </script>
 
@@ -131,10 +129,24 @@
     style="width:375px;height:800px;border:red 1px solid;flex-shrink:0"
     bind:this={container}
   />
+
   <div class="apis">
     <div class="api-box">
       <div class="api-title">初始化状态：</div>
       {inited ? "初始化完成" : "正在加载" + progress + "%"}
+    </div>
+    <div class="api-box">
+      <div class="api-title">角色切换：</div>
+      <button
+        on:click={() => {
+          setAvatar("avatar_257","641811add41a3f2f91247af5");
+        }}>女</button
+      >
+      <button
+        on:click={() => {
+          setAvatar("avatar_1078","actor_100230");
+        }}>男</button
+      >
     </div>
     <div class="api-box">
       <div class="api-title">模板切换：</div>
@@ -194,9 +206,7 @@
       <button on:click={speak}>speak</button>
       <button on:click={stopAct}>打断演讲</button>
       <button on:click={speackStream}>流式演讲</button>
-
     </div>
-   
 
     {#if !!inited}
       <div class="chat-history">
