@@ -21,4 +21,4 @@
 
 
 ### 3、联系我们
-<img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-C35FTNQMCNKYUAHXH3HV3-N0G59VNL-X1.jpeg?_t=2023111150" height="300" width="300"></img>
+<img src="https://cdn.wehome.cn/cmn/jpeg/META-1OB66K71-OSKH427880QFC93P4K5J2-9KRUUARL-GK.jpeg" height="300" width="300"></img>
