@@ -1,7 +1,12 @@
 ## NextHuman虚拟人开发
 
 ### 1、开发者中心
-[开发者&文档入口](https://nexthuman.cn/developer)
+[开发者&文档入口](https://nexthuman.cn/developer) 该仓库为NextHuman对外提供的WebGL形式的集成入口，如果需要其他引擎或数字人类型的集成，可前往以下入口：
+
+[UE4/UE5集成](https://github.com/WeHome007/NextCAS-UE)
+
+[Unity3D集成](https://nexthuman.cn/developer/#/open/docs/unity)
+
 
 ### 2、案例展示
 《UE示例》 
@@ -14,8 +19,6 @@
 
 ### 3、SDK集成
 按需选择以下集成
-
-[UE4/UE5](https://github.com/WeHome007/NextCAS-UE)
 
 [WebGL/小程序](WebGL/README.md)
 
