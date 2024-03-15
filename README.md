@@ -3,7 +3,7 @@
 ### 1、开发者中心
 该仓库为NextHuman对外提供的WebGL形式的集成入口，如果需要其他引擎或数字人类型的集成，可根据需求前往以下不同入口：
 
-[WebGL开发文档]([https://nexthuman.cn/developer](https://nexthuman.cn/developer/#/open/docs/js))
+[WebGL开发文档](https://nexthuman.cn/developer/#/open/docs/js)
 
 [UE4/UE5集成入口](https://github.com/WeHome007/NextCAS-UE)
 
