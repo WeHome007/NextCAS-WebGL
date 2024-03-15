@@ -4,7 +4,7 @@
 [开发者&文档入口](https://nexthuman.cn/developer)
 
 ### 2、案例展示
-《UE示例》
+《UE示例》 
 
 <img src="https://cdn.wehome.cn/cmn/jpeg/META-8NA66KC1-OYLELYLD6GZZBDJJRXAM3-CZSJKLNL-T3.jpeg?_t=2023111150" ></img>
 
@@ -15,7 +15,7 @@
 ### 3、SDK集成
 按需选择以下集成
 
-[UE4/UE5](UE/README.md)
+[UE4/UE5](https://github.com/WeHome007/NextCAS-UE)
 
 [WebGL/小程序](WebGL/README.md)
 
