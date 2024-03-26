@@ -3,6 +3,7 @@
   import NextCas from "@nextcas/sdk";
   import type { ReplayEvent } from "@nextcas/sdk";
   let container: HTMLDivElement;
+  import * as jose from 'jose';
 
   let cas: NextCas;
 
@@ -11,10 +12,22 @@
   let inited = false;
   let inputValue = "";
 
-  async function getToken() {
-   return {data:''}
-  }
+  const AccessKey = '';
+  const AccessSecret = '';
+  let encodeSecKey = new TextEncoder().encode(AccessSecret)
 
+  async function getToken() {
+    const jwt = await new jose.SignJWT({
+        role: 'role.visit',
+        sdk: true,
+        skipSaasPerm: false,
+        timestamp: Date.now(),
+    }).setProtectedHeader({alg: 'HS256'})
+    .setExpirationTime(Math.floor((Date.now() + 24 * 60 * 60 * 1000) / 1000))
+    .sign(encodeSecKey);
+    return {data:`${AccessKey}@${jwt}`}
+  }
+  
   let chatHistory: { source: "nexthuman" | "guest"; content: string }[] = [
     {
       source: "nexthuman",
@@ -42,6 +55,8 @@
         cas.speak("你好，请问有什么可以帮您");
       });
     });
+
+    window['cas'] = cas;
   });
 
   onDestroy(() => {

@@ -19,6 +19,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "@nextcas/sdk": "1.0.2"
+    "@nextcas/sdk": "1.0.2",
+    "jose": "^5.2.0"
   }
 }
